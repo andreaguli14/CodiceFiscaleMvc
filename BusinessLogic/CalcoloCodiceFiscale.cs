@@ -1,7 +1,7 @@
 ﻿using DataLayer;
 namespace BusinessLogic;
 
-public class CF
+public class CF : ICodiceFiscale
 {
     private Dictionary<char, int> tabellaConversione;
 
@@ -180,7 +180,7 @@ public class CF
         };
         for (int i = 0; i < 15; i++)
         {
-            char carattere = codiceFis[i];
+                char carattere = codiceFis.ToUpper()[i];
             int valore;
             if (i % 2 == 0)
             {
@@ -224,13 +224,12 @@ public class CF
 
     public string CalcolaCodiceFiscale(PersonaDataViewModel model)
     {
-        ComuniContext context = new();
         string nome = CalcolaNome(model);
         string cognome = CalcolaCognome(model);
         string giornoNascita = CalcolaValoriNascita(model).Giorno.Substring(0, 2);
         string meseNascita = CalcolaValoriNascita(model).MeseNascita.ToString();
         string annoNascita = CalcolaValoriNascita(model).Anno;
-        string comune = context.Comunis.FirstOrDefault(x => x.Comune.ToLower() == model.Istat.ToLower()).Codice;
+        string comune = model.Istat;
         string codiceFisc = cognome + nome + annoNascita + meseNascita + giornoNascita + comune;
         string carattereControllo = CalcolaCarattereControllo(codiceFisc).ToString();
         string codicefiscale = codiceFisc + carattereControllo;

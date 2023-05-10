@@ -6,29 +6,79 @@ using CodiceFiscale.Models;
 
 namespace CodiceFiscale.Controllers;
 
-public class HomeController : Controller
+public class CFController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    
+    private readonly ICodiceFiscale _calcolo;
+    private readonly ComuniContext _comuni;
 
-    public HomeController(ILogger<HomeController> logger)
+    public CFController(ICodiceFiscale codice, ComuniContext comuni)
     {
-        _logger = logger;
+        _calcolo = codice;
+        _comuni = comuni;
     }
 
     public IActionResult Index()
     {
-        PersonaDataViewModel x = new();
-        x.FirstName = "Andrea";
-        x.LastName = "Gulisano";
-        x.Birthday = DateTime.Parse("2003-11-14");
-        x.Istat = "Catania";
-        x.Gender = 'M';
 
-       
-        CF calcolo = new();
-       
-        return View("Index", calcolo.CalcolaCodiceFiscale(x));
+        PersonaDataViewModel x = new();
+        x.CodiceFiscale = "";
+   
+        return View("Index",x);
+
     }
+
+    [HttpPost]
+    public IActionResult Index(PersonaDataViewModel x)
+    {
+
+        x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat.Remove(0, 2)).Code;
+        x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
+
+        return View("Index", x);
+    }
+
+
+
+    public JsonResult GetComuni(string? id)
+    {
+        var comuni = _comuni.Comunis.ToList();
+
+        if (!string.IsNullOrEmpty(id))
+        {
+             comuni = _comuni.Comunis.Where(x => x.Sigla == id).ToList();
+        }
+     
+
+        return new JsonResult(comuni);
+    }
+
+
+    public JsonResult GetProvince()
+    {
+
+        var province = _comuni.Comunis.Distinct().ToList();
+
+        return new JsonResult(province);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public IActionResult Privacy()
     {

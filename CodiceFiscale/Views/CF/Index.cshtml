@@ -1,0 +1,98 @@
+﻿@using DataLayer
+@model PersonaDataViewModel
+
+
+
+<form method="post">
+    <div class="d-flex justify-content-center">
+        <div class=" d-flex flex-column" style="margin-left: auto; margin-right: auto">
+
+            <div style="background-image: url('../img/codfisc.jpg'); background-size: cover; width: 60vh; height: 38vh; margin-left: auto; margin-right: auto">
+                <div style="margin-top: 30%; margin-left: 15%; margin-bottom: 1%;">
+                    @if (Model.CodiceFiscale != "")
+                    {
+                        <strong>@Model.CodiceFiscale</strong>
+                    }
+                    else
+                    {
+                        <strong>&nbsp;</strong>
+                    }
+                </div>
+                <input asp-for="@Model.LastName" class="text-form" style="margin-left:15%; box-sizing:content-box; width:30%; height:6%; margin-bottom: 2px">
+                <br />
+                <input asp-for="@Model.FirstName" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 30%; height: 6%; margin-bottom: 5px">
+                <br />
+                <select id="comuni" asp-for="@Model.Istat" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 32%; height: 6%; ">
+                </select>
+                <select asp-for="@Model.Gender" class="text-form" style="margin-left: 32%; box-sizing: content-box; width: 10%; height: 6%; margin-bottom:1% ">
+                    <option default>M</option>
+                    <option>F</option>
+                </select>
+                <br />
+                <select id="province" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 10%; height: 6%; ">
+                </select>
+                <input asp-for="@Model.Birthday" class="text-form" type="date" style="margin-left: 32%; box-sizing: content-box; width: 17%; height: 6%; margin-bottom: 5px">
+            </div>
+            <br />
+            <button class="btn btn-lg btn-success text-center" style="margin-left:auto; margin-right:auto">Calcola</button>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        id = "";
+        loadProvince()
+        loadComuni(id)
+    });
+
+
+    $("#province").change(function () {
+          id = "";
+          id = $(this).val().slice(0, 2);
+          loadComuni(id);
+    });
+
+
+    $("#comuni").change(function () {
+        id = $(this).val().slice(0, 2);
+        console.log(id);
+        loadProvince();
+        $("#" + id).attr("selected", true);
+       
+    });
+
+
+    function loadProvince() {
+
+        $.ajax({
+            url: '/cf/GetProvince/',
+            success: function (response) {
+                $("#province").append("<option  disabled value=''>PR</option>");
+                $.each(response, function (i, data) {
+                    $("#province").append("<option id='" + data.sigla + "'value='" + data.sigla + "' >" + data.sigla + "</option>");
+                });
+               
+               
+            }
+        })
+    }
+
+    function loadComuni(id) {
+        $("#comuni").empty();
+
+        $.ajax({
+            url: '/cf/GetComuni/' + id ,
+            success: function (response) {
+                $("#comuni").append("<option default disabled value=''>Comune</option>");
+                $.each(response, function (i, data) {
+                    $("#comuni").append("<option value='" + data.sigla + data.comune + "' >" + data.comune + "</option>");
+                })
+                
+            }
+        })
+    }
+</script>
+
+

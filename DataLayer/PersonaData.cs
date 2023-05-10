@@ -26,7 +26,8 @@ public class PersonaDataViewModel
     [Display(Name = "Genere")]
 
     public char Gender { get; set; }
-    public string CodiceFiscale { get; set; }
+
+    public string? CodiceFiscale { get; set; }
 
 }
 

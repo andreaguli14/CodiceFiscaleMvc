@@ -17,16 +17,21 @@ public partial class ComuniContext : DbContext
 
     public virtual DbSet<Comuni> Comunis { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=password;Database=comuni");
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Comuni>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("comuni");
+            entity.HasKey(e => e.Code).HasName("comuni3_pkey");
+
+            entity.ToTable("comuni");
+
+            entity.Property(e => e.Code).HasColumnName("code");
+            entity.Property(e => e.Comune).HasColumnName("comune");
+            entity.Property(e => e.Provincia).HasColumnName("provincia");
+            entity.Property(e => e.Regione).HasColumnName("regione");
+            entity.Property(e => e.Sigla).HasColumnName("sigla");
         });
 
         OnModelCreatingPartial(modelBuilder);
