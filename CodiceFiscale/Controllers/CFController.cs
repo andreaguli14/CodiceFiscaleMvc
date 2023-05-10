@@ -3,6 +3,9 @@ using DataLayer;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CodiceFiscale.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Http;
 
 namespace CodiceFiscale.Controllers;
 
@@ -40,26 +43,28 @@ public class CFController : Controller
 
 
 
-    public JsonResult GetComuni(string? id)
+    public async Task<IActionResult> GetComuni(string? id)
     {
-        var comuni = _comuni.Comunis.ToList();
+        List<Comuni> comuni = new();
 
         if (!string.IsNullOrEmpty(id))
         {
-             comuni = _comuni.Comunis.Where(x => x.Sigla == id).ToList();
+               comuni = await _comuni.Comunis.Where(x => x.Sigla == id).ToListAsync();
+        }
+        else
+        {
+            comuni = await _comuni.Comunis.ToListAsync();
         }
      
 
-        return new JsonResult(comuni);
+        return  Ok(comuni);
     }
 
 
-    public JsonResult GetProvince()
+    public async Task<IActionResult> GetProvince()
     {
 
-        var province = _comuni.Comunis.Distinct().ToList();
-
-        return new JsonResult(province);
+        return  Ok(await _comuni.Comunis.Distinct().ToListAsync());
     }
 
 
