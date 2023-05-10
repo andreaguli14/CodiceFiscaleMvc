@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer;
@@ -17,7 +18,14 @@ public partial class ComuniContext : DbContext
 
     public virtual DbSet<Comuni> Comunis { get; set; }
 
-
+    //override configuring
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseNpgsql("Host=localhost;Database=Comuni;Username=postgres;Password=postgres");
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
