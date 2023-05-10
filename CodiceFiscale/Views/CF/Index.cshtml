@@ -58,7 +58,7 @@
 
     $("#comuni").change(function () {
         id = "#" + $(this).val().slice(0, 2);
-        $(id).attr("selected", true);
+        loadProvince(id);
     });
 
 
@@ -71,6 +71,7 @@
                 $.each(response, function (i, data) {
                     $("#province").append("<option id='" + data.sigla + "'value='" + data.sigla + "' >" + data.sigla + "</option>");
                 });
+                $(id).attr("selected", true);
                 
 
 
@@ -90,6 +91,7 @@
                 $.each(response, function (i, data) {
                     $("#comuni").append("<option value='" + data.sigla + data.comune + "' >" + data.comune + "</option>");
                 })
+                
 
             }
         })
