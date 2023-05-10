@@ -1,23 +1,92 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    
 }
 
+.carta {
+    background-image: url('../img/codfisc.jpg');
+    background-size: cover;
+    width: 60vh;
+    height: 38vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fisc {
+    margin-top: 30%;
+    margin-left: 15%;
+    margin-bottom: 1%;
+}
+.surname {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 30%;
+    height: 6%;
+    margin-bottom: 2px;
+}
+.name {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 30%;
+    height: 6%;
+    margin-bottom: 5px;
+}
+.istat {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 32%;
+    height: 6%;
+}
+.gender {
+    margin-left: 32%;
+    box-sizing: content-box;
+    width: 10%;
+    height: 6%;
+    margin-bottom: 1%;
+}
+.province {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 10%;
+    height: 6%;
+}
+.data {
+    margin-left: 32%;
+    box-sizing: content-box;
+    width: 17%;
+    height: 6%;
+    margin-bottom: 5px;
+}
+.bottone {
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 500px) {
+    .carta {
+        background-image: none;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
