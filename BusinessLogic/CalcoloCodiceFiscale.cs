@@ -229,7 +229,7 @@ public class CF : ICodiceFiscale
         string giornoNascita = CalcolaValoriNascita(model).Giorno.Substring(0, 2);
         string meseNascita = CalcolaValoriNascita(model).MeseNascita.ToString();
         string annoNascita = CalcolaValoriNascita(model).Anno;
-        string comune = model.Istat;
+        string comune =   model.Istat;
         string codiceFisc = cognome + nome + annoNascita + meseNascita + giornoNascita + comune;
         string carattereControllo = CalcolaCarattereControllo(codiceFisc).ToString();
         string codicefiscale = codiceFisc + carattereControllo;
