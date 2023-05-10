@@ -1,0 +1,49 @@
+﻿@model DataLayer.Comuni
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Comuni</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Comune" class="control-label"></label>
+                <input asp-for="Comune" class="form-control" />
+                <span asp-validation-for="Comune" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Regione" class="control-label"></label>
+                <input asp-for="Regione" class="form-control" />
+                <span asp-validation-for="Regione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Provincia" class="control-label"></label>
+                <input asp-for="Provincia" class="form-control" />
+                <span asp-validation-for="Provincia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sigla" class="control-label"></label>
+                <input asp-for="Sigla" class="form-control" />
+                <span asp-validation-for="Sigla" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Code" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

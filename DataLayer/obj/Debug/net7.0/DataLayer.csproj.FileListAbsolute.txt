@@ -26,3 +26,17 @@
 /Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/obj/Debug/net7.0/DataLayer.pdb
 /Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/obj/Debug/net7.0/DataLayer.genruntimeconfig.cache
 /Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/obj/Debug/net7.0/ref/DataLayer.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\bin\Debug\net7.0\DataLayer.deps.json
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\bin\Debug\net7.0\DataLayer.runtimeconfig.json
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\bin\Debug\net7.0\DataLayer.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\bin\Debug\net7.0\DataLayer.pdb
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.csproj.AssemblyReference.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.AssemblyInfoInputs.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.AssemblyInfo.cs
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.csproj.CoreCompileInputs.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\refint\DataLayer.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.pdb
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\DataLayer.genruntimeconfig.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\DataLayer\obj\Debug\net7.0\ref\DataLayer.dll

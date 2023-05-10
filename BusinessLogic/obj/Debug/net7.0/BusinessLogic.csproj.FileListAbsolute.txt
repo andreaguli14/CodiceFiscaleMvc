@@ -28,3 +28,18 @@
 /Users/andreaguli14/Desktop/CodiceFiscale/BusinessLogic/obj/Debug/net7.0/refint/BusinessLogic.dll
 /Users/andreaguli14/Desktop/CodiceFiscale/BusinessLogic/obj/Debug/net7.0/BusinessLogic.pdb
 /Users/andreaguli14/Desktop/CodiceFiscale/BusinessLogic/obj/Debug/net7.0/ref/BusinessLogic.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\bin\Debug\net7.0\BusinessLogic.deps.json
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\bin\Debug\net7.0\BusinessLogic.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\bin\Debug\net7.0\BusinessLogic.pdb
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\bin\Debug\net7.0\DataLayer.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\bin\Debug\net7.0\DataLayer.pdb
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfo.cs
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CopyComplete
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
+D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll

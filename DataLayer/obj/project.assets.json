@@ -1300,24 +1300,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/andreaguli14/.nuget/packages/": {}
+    "C:\\Users\\icesa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/DataLayer.csproj",
+      "projectUniqueName": "D:\\SVILUPPO .NET\\REPOS\\CodiceFiscaleMvc\\CodiceFiscaleMvc\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "/Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/DataLayer.csproj",
-      "packagesPath": "/Users/andreaguli14/.nuget/packages/",
-      "outputPath": "/Users/andreaguli14/Desktop/CodiceFiscale/DataLayer/obj/",
+      "projectPath": "D:\\SVILUPPO .NET\\REPOS\\CodiceFiscaleMvc\\CodiceFiscaleMvc\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\icesa\\.nuget\\packages\\",
+      "outputPath": "D:\\SVILUPPO .NET\\REPOS\\CodiceFiscaleMvc\\CodiceFiscaleMvc\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/andreaguli14/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\icesa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1381,7 +1383,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
