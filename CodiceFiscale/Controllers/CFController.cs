@@ -21,9 +21,9 @@ public class CFController : Controller
         _comuni = comuni;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-
+        //convertire ad asincrono
         PersonaDataViewModel x = new();
         x.CodiceFiscale = "";
    
@@ -32,9 +32,9 @@ public class CFController : Controller
     }
 
     [HttpPost]
-    public IActionResult Index(PersonaDataViewModel x)
+    public async Task<IActionResult> Index(PersonaDataViewModel x)
     {
-
+        //convertire ad asincrono
         x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat.Remove(0, 2)).Code;
         x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
 

@@ -17,7 +17,7 @@ namespace CodiceFiscale.Controllers
         {
             _context = context;
         }
-
+        
         // GET: Comunis
         public async Task<IActionResult> Index()
         {
@@ -51,8 +51,6 @@ namespace CodiceFiscale.Controllers
         }
 
         // POST: Comunis/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Comune,Regione,Provincia,Sigla,Code")] Comuni comuni)
@@ -83,8 +81,6 @@ namespace CodiceFiscale.Controllers
         }
 
         // POST: Comunis/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("Comune,Regione,Provincia,Sigla,Code")] Comuni comuni)
