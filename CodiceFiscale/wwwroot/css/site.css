@@ -15,11 +15,13 @@
 html {
     position: relative;
     min-height: 100%;
+    
 }
 
 body {
     margin-bottom: 60px;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size:1em;
 }
 
 .carta {
@@ -37,6 +39,7 @@ body {
     margin-bottom: 1%;
 }
 .surname {
+    margin-bottom:10px;
     margin-left: 15%;
     box-sizing: content-box;
     width: 30%;
@@ -70,23 +73,78 @@ body {
     height: 6%;
 }
 .data {
-    margin-left: 32%;
+    margin-left: 60%;
+    margin-bottom:5%;
     box-sizing: content-box;
     width: 17%;
     height: 6%;
-    margin-bottom: 5px;
+   
 }
 .bottone {
     margin-left: auto;
     margin-right: auto;
 }
+
 @media screen and (max-width: 500px) {
-    .carta {
+    .carta {background-color:lightgreen;
         background-image: none;
         background-size: cover;
-        width: 100vw;
-        height: 100vh;
+        width: 380px;
+        height: 280px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .label {
+        margin-left:10px;
+    }
+    .fisc {
+        height: 25px;
+        margin-top:0px;
+      
+    }
+
+    .surname {
+        height: 25px;
+        margin-left: 10px;
+    }
+
+    .name {
+        height: 25px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .istat {
+        height: 25px;
+        margin-left: 0px;
+        
+    }
+
+    .gender {
+        height: 25px;
+        margin-left: 10px;
+        margin-top:5px;
+    }
+
+    .province {
+        height: 25px;
+        margin-left: 10px;
+        width: 40px;
+    }
+
+    .data {
+        height: 25px;
+        margin-left: 0px;
+        margin-top: 5px;
+        width:100px;
+    }
+
+    .bottone {
+       
+    }
+}
+@media screen and (min-width: 501px) {
+    .hidden {
+        display: none;
     }
 }

@@ -6,10 +6,11 @@
 <form method="post">
 	<div class="d-flex justify-content-center">
 		<div class=" d-flex flex-column bottone">
-
-			<div class="carta">
+		
+			<div class="carta ">
+				<label class="hidden label">Codice Fiscale:</label>
 				<div class="fisc">
-
+					
 					@if (Model.CodiceFiscale != "")
 					{
 						<strong>@Model.CodiceFiscale</strong>
@@ -20,31 +21,33 @@
 					}
 
 				</div>
-
+				<label class="hidden label">Cognome:</label>
 				<input asp-for="@Model.LastName" class="text-form surname">
+				
 
 				<br />
-
-				<input asp-for="@Model.FirstName" class="text-form name">
-
+				<label class="hidden label">Nome:</label>
+				<input asp-for="@Model.FirstName"  class="text-form name">
+				
 				<br />
-
-				<select id="comuni" asp-for="@Model.Istat" class="text-form istat">
+				<label class="hidden label">Comuni:</label>
+				<select id="comuni" asp-for="@Model.Istat"  class="text-form istat">
 				</select>
-
-
-				<select asp-for="@Model.Gender" class="text-form gender">
+				<br class="hidden"/>
+				<label class="hidden label">Genere:</label>
+				<select asp-for="@Model.Gender"  class="text-form gender">
 					<option default>M</option>
 					<option>F</option>
 				</select>
 
-				<br />
-
+				<br class="hidden" />
+				<label class="hidden label">Province:</label>
 				<select id="province" class="text-form province">
 				</select>
-
-
+				<br class="hidden" />
+				<label class="hidden label">Data di Nascita:</label>
 				<input asp-for="@Model.Birthday" class="text-form data" type="date">
+				
 
 			</div>
 			<br />
@@ -52,6 +55,7 @@
 		</div>
 	</div>
 </form>
+
 
 
 

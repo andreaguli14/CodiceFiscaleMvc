@@ -1,11 +1,10 @@
 ﻿using BusinessLogic;
 using DataLayer;
-using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
 
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Http;
+
 
 namespace CodiceFiscale.Controllers;
 
@@ -34,11 +33,17 @@ public class CFController : Controller
     [HttpPost]
     public async Task<IActionResult> Index(PersonaDataViewModel x)
     {
+        try { 
         //convertire ad asincrono
         x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat.Remove(0, 2)).Code;
         x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
+			return View("Index", x);
+		}
+		catch(Exception ex)
+        {
+            return RedirectToAction("Index");
+		}
 
-        return View("Index", x);
     }
 
 
