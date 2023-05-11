@@ -13,12 +13,10 @@
 
 
     $("#comuni").change(function () {
-        id = "#" + $(this).val().slice(0, 2);
-        loadProvince(id);
     });
 
 
-    function loadProvince(id) {
+    function loadProvince() {
         $("#province").empty();
         $.ajax({
             url: '/cf/GetProvince/',
@@ -27,7 +25,7 @@
                 $.each(response, function (i, data) {
                     $("#province").append("<option id='" + data.sigla + "'value='" + data.sigla + "' >" + data.sigla + "</option>");
                 });
-                $(id).attr("selected", true);
+                
                 
 
 
