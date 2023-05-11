@@ -19,13 +19,13 @@ public partial class ComuniContext : DbContext
     public virtual DbSet<Comuni> Comunis { get; set; }
 
     //override configuring
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Database=Comuni;Username=postgres;Password=postgres");
-        }
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    if (!optionsBuilder.IsConfigured)
+    //    {
+    //        optionsBuilder.UseNpgsql("Host=localhost;Database=Comuni;Username=postgres;Password=postgres");
+    //    }
+    //}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

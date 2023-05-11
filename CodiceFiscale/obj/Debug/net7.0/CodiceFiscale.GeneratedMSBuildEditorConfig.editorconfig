@@ -9,65 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CodiceFiscale
 build_property.RootNamespace = CodiceFiscale
-build_property.ProjectDir = D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\CodiceFiscale\
+build_property.ProjectDir = /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\SVILUPPO .NET\REPOS\CodiceFiscaleMvc\CodiceFiscaleMvc\CodiceFiscale
+build_property.MSBuildProjectDirectory = /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/CF/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZcSW5kZXguY3NodG1s
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/CF/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZcUHJpdmFjeS5jc2h0bWw=
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Comunis/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tdW5pc1xDcmVhdGUuY3NodG1s
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Comunis/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tdW5pc1xEZWxldGUuY3NodG1s
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Comunis/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tdW5pc1xEZXRhaWxzLmNzaHRtbA==
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Comunis/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tdW5pc1xFZGl0LmNzaHRtbA==
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Comunis/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tdW5pc1xJbmRleC5jc2h0bWw=
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/AppRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwUm9sZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/AppRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwUm9sZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/CF/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ0YvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Comunis/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tdW5pcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Comunis/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tdW5pcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Comunis/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tdW5pcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SVILUPPO .NET/REPOS/CodiceFiscaleMvc/CodiceFiscaleMvc/CodiceFiscale/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-f077eh5pnh
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Comunis/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tdW5pcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Comunis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tdW5pcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/User/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-n5gyfsobjn

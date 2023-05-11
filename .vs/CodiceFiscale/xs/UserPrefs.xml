@@ -6,30 +6,26 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.CodiceFiscale PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CodiceFiscale/Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodiceFiscale/Controllers/CFController.cs">
     <Files>
-      <File FileName="CodiceFiscale/Controllers/HomeController.cs" Line="42" Column="1" />
-      <File FileName="CodiceFiscale/Views/Home/Index.cshtml" Line="73" Column="1" />
-      <File FileName="DataLayer/PersonaData.cs" Line="20" Column="30" />
-      <File FileName="BusinessLogic/CalcoloCodiceFiscale.cs" Line="227" Column="33" />
-      <File FileName="DataLayer/ComuniContext.cs" Line="26" Column="10" />
-      <File FileName="CodiceFiscale/Views/Shared/_Layout.cshtml" Line="44" Column="4" />
+      <File FileName="DataLayer/PersonaData.cs" />
+      <File FileName="BusinessLogic/ICodiceFiscale.cs" />
+      <File FileName="DataLayer/Comuni.cs" />
+      <File FileName="CodiceFiscale/Program.cs" />
+      <File FileName="CodiceFiscale/Controllers/CFController.cs" Line="42" Column="6" />
+      <File FileName="CodiceFiscale/Controllers/ComunisController.cs" />
+      <File FileName="CodiceFiscale/Views/CF/Index.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CodiceFiscale" expanded="True">
+          <Node name="CodiceFiscale" expanded="True" selected="True">
             <Node name="BusinessLogic" expanded="True" />
             <Node name="CodiceFiscale" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="CF" expanded="True" />
                 <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
               </Node>
             </Node>
             <Node name="DataLayer" expanded="True" />
