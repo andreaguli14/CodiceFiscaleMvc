@@ -2,7 +2,7 @@
 using DataLayer;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CodiceFiscale.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Http;
@@ -69,31 +69,5 @@ public class CFController : Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
 }
 

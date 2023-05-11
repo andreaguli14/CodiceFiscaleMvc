@@ -117,7 +117,7 @@
             },
             "Microsoft.Extensions.Configuration.UserSecrets": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Npgsql": {
               "target": "Package",
