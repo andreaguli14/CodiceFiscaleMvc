@@ -31,7 +31,7 @@ public partial class ComuniContext : DbContext
     {
         modelBuilder.Entity<Comuni>(entity =>
         {
-            entity.HasKey(e => e.Code).HasName("comuni3_pkey");
+            entity.HasKey(e => e.Code);
 
             entity.ToTable("comuni");
 

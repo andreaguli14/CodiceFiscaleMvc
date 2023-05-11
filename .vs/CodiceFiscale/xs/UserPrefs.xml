@@ -6,26 +6,32 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.CodiceFiscale PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CodiceFiscale/Controllers/CFController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodiceFiscale/Views/CF/Index.cshtml">
     <Files>
-      <File FileName="DataLayer/PersonaData.cs" />
-      <File FileName="BusinessLogic/ICodiceFiscale.cs" />
-      <File FileName="DataLayer/Comuni.cs" />
-      <File FileName="CodiceFiscale/Program.cs" />
-      <File FileName="CodiceFiscale/Controllers/CFController.cs" Line="42" Column="6" />
-      <File FileName="CodiceFiscale/Controllers/ComunisController.cs" />
-      <File FileName="CodiceFiscale/Views/CF/Index.cshtml" />
+      <File FileName="CodiceFiscale/wwwroot/js/GetComuniProvince.js" Line="53" Column="10" />
+      <File FileName="CodiceFiscale/Controllers/CFController.cs" Line="38" Column="1" />
+      <File FileName="CodiceFiscale/Controllers/ComunisController.cs" Line="24" Column="1" />
+      <File FileName="CodiceFiscale/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="CodiceFiscale/Views/CF/Index.cshtml" Line="14" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CodiceFiscale" expanded="True" selected="True">
+          <Node name="CodiceFiscale" expanded="True">
             <Node name="BusinessLogic" expanded="True" />
             <Node name="CodiceFiscale" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="CF" expanded="True" />
+                <Node name="CF" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
               </Node>
             </Node>
             <Node name="DataLayer" expanded="True" />

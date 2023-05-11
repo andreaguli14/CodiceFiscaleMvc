@@ -11,10 +11,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 var comunistring = builder.Configuration.GetConnectionString("Comuni") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddDbContext<ComuniContext>(options =>
-    options.UseNpgsql(comunistring));
+    options.UseSqlServer(comunistring));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
