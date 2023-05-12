@@ -5,14 +5,14 @@
     });
 
 
-    $("#province").change(function () {
+    $("#province").click(function () {
         id = "";
         id = $(this).val().slice(0, 2);
         loadComuni(id);
     });
 
 
-    $("#comuni").change(function () {
+    $("#comuni").click(function () {
     });
 
 
@@ -25,12 +25,6 @@
                 $.each(response, function (i, data) {
                     $("#province").append("<option id='" + data.sigla + "'value='" + data.sigla + "' >" + data.sigla + "</option>");
                 });
-                
-                
-
-
-
-
             }
         })
     }
