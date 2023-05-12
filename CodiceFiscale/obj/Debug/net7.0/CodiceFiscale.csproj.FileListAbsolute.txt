@@ -85,7 +85,6 @@
 /Users/andreaguli14/Projects/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/appsettings.Development.json
 /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/appsettings.json
-/Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/app.db
 /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/CodiceFiscale.staticwebassets.runtime.json
 /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/CodiceFiscale
 /Users/andreaguli14/Desktop/CodiceFiscale/CodiceFiscale/bin/Debug/net7.0/CodiceFiscale.deps.json

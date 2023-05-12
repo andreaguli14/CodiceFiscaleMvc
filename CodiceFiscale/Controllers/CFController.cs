@@ -34,9 +34,12 @@ public class CFController : Controller
     [HttpPost]
     public async Task<IActionResult> Index(PersonaDataViewModel x)
     {
-        //convertire ad asincrono
-        x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat.Remove(0, 2)).Code;
-        x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
+        try
+        {
+            //convertire ad asincrono
+            x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat).Code;
+            x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
+        }catch(Exception e) { return RedirectToAction("Index"); }
 
         return View("Index", x);
     }

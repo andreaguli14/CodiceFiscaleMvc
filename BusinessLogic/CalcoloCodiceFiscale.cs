@@ -41,7 +41,7 @@ public class CF : ICodiceFiscale
         // Se ci sono più di 3 consonanti, prendo le prime 2 e la quarta
         if (consonantiArray.Count >= 4)
         {
-            consonanti = new string(new char[] { consonantiArray[0], consonantiArray[1], consonantiArray[3] });
+            consonanti = new string(new char[] { consonantiArray[0], consonantiArray[2], consonantiArray[3] });
         }
         else if (consonantiArray.Count == 3)
         {
@@ -167,60 +167,70 @@ public class CF : ICodiceFiscale
     }
 
 
-    private char CalcolaCarattereControllo(string codiceFis)
+
+    public static char CFCalcolaCIN(string cf)
     {
-        int totale = 0;
-        tabellaConversione = new Dictionary<char, int>()
-        {
-            { '0', 0 }, { '1', 1 }, { '2', 2 }, { '3', 3 }, { '4', 4 }, { '5', 5 }, { '6', 6 },
-            { '7', 7 }, { '8', 8 }, { '9', 9 }, { 'A', 0 }, { 'B', 1 }, { 'C', 2 }, { 'D', 3 },
-            { 'E', 4 }, { 'F', 5 }, { 'G', 6 }, { 'H', 7 }, { 'I', 8 }, { 'J', 9 }, { 'K', 10 },
-            { 'L', 11 }, { 'M', 12 }, { 'N', 13 }, { 'O', 14 }, { 'P', 15 }, { 'Q', 16 }, { 'R', 17 },
-            { 'S', 18 }, { 'T', 19 }, { 'U', 20 }, { 'V', 21 }, { 'W', 22 }, { 'X', 23 }, { 'Y', 24 }, { 'Z', 25 }
-        };
+        const string validNumber0 = "0123456789LMNPQRSTUV"; // lettere per gestire i casi di Omocodia
+        const string validLetter1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string validMonth2 = "ABCDEHLMPRST";
+        byte[] RE = { 1, 1, 1, 1, 1, 1, 0, 0, 2, 0, 0, 1, 0, 0, 0 }; // 1 = lettera, 0 = Numero o lettera, 2=mese
+        int[] TD = { 01, 00, 05, 07, 09, 13, 15, 17, 19, 21, 02, 04, 18, 20, 11, 03, 06, 08, 12, 14, 16, 10, 22, 25, 24, 23 };
+
+        int cin = 0;
+        bool dispari = true;
+
+        if (string.IsNullOrWhiteSpace(cf))
+            throw new ArgumentException("Parametro invalido");
+
+        cf = cf.ToUpper();
+
+        
+        
+            // mi aspetto il codice fiscale completo di 15 caratteri senza il cin finale
+            if (cf.Length != 15)
+                throw new ArgumentException("Lunghezza invalida");
+        
+
         for (int i = 0; i < 15; i++)
         {
-                char carattere = codiceFis.ToUpper()[i];
-            int valore;
-            if (i % 2 == 0)
+            char c = cf[i];
+            // verifica carattere in posizione corretta
+            byte rePos = RE[i];
+            int v = -1;
+
+            if (rePos == 0) // numeri
             {
-                // Raddoppia e somma il valore delle cifre di ordine pari
-                valore = (tabellaConversione[carattere] * 2) % 10
-                         + (tabellaConversione[carattere] * 2) / 10;
-            }
-            else
-            { // Somma il valore delle cifre di ordine dispari
-                valore = 2 * tabellaConversione[carattere];
-                if (valore >= 10)
+                v = validNumber0.IndexOf(c);
+                if (v > 9)
                 {
-                    // Se il valore è maggiore o uguale a 10, scompone il valore in cifre
-                    // e somma le singole cifre tra loro
-                    valore = valore / 10 + valore % 10;
+                    v = validLetter1.IndexOf(c);
                 }
             }
-
-            totale += valore;
-        }
-        int resto = totale % 26;
-        char carattereControllo = ConvertiValoreInCarattere(resto);
-
-        return carattereControllo;
-    }
-    char ConvertiValoreInCarattere(int valore)
-    {
-        // Converte il valore intero in un carattere corrispondente nella tabella di conversione
-        foreach (var coppia in tabellaConversione)
-        {
-            if (coppia.Value == valore)
+            else if (rePos == 1)  // lettere
             {
-                return coppia.Key;
+                v = validLetter1.IndexOf(c);
             }
+            else if (rePos == 2) // mese
+            {
+                if (validMonth2.IndexOf(c) >= 0)
+                {
+                    v = validLetter1.IndexOf(c);
+                }
+            }
+            if (v == -1)
+            {
+                //se c'é una discordanza sulla posizione lettera/numero
+                throw new ArgumentException($"Carattere non valido alla posizione {i + 1}, '{cf.Substring(0, i) + " < " + cf[i] + " > " + cf.Substring(i + 1)}'");
+            }
+
+            cin += dispari == true ? TD[v] : v;
+            dispari = !dispari;
         }
-
-
-        throw new ArgumentException("Valore non valido per il carattere di controllo.");
+        cin -= (cin / 26) * 26; //cin = cin - (cin / 26) * 26;
+                                //Ritorna un carattere contenente il CIN
+        return validLetter1[cin];
     }
-
+   
 
     public string CalcolaCodiceFiscale(PersonaDataViewModel model)
     {
@@ -231,7 +241,7 @@ public class CF : ICodiceFiscale
         string annoNascita = CalcolaValoriNascita(model).Anno;
         string comune =   model.Istat;
         string codiceFisc = cognome + nome + annoNascita + meseNascita + giornoNascita + comune;
-        string carattereControllo = CalcolaCarattereControllo(codiceFisc).ToString();
+        string carattereControllo = CFCalcolaCIN(codiceFisc).ToString();
         string codicefiscale = codiceFisc + carattereControllo;
 
         return codicefiscale;

@@ -1,46 +1,82 @@
 ﻿@using DataLayer
+@using Microsoft.EntityFrameworkCore;
 @model PersonaDataViewModel
+@inject ComuniContext _comuni;
+@{
+    
+    var province = await _comuni.Comunis.Distinct().ToListAsync();
+}
 
 
 <form method="post">
-    <div class="d-flex justify-content-center">
-        <div class=" d-flex flex-column" style="margin-left: auto; margin-right: auto">
+	<div class="d-flex justify-content-center">
+		<div class=" d-flex flex-column bottone">
+		
+			<div class="carta ">
+				
+				<div class="fisc">
+					<label class="hidden label">Codice Fiscale:</label>
+					@if (Model.CodiceFiscale != "")
+					{
+						<strong>@Model.CodiceFiscale</strong>
+					}
+					else
+					{
+						<strong>&nbsp;</strong>
+					}
 
-            <div style="background-image: url('../img/codfisc.jpg'); background-size: cover; width: 60vh; height: 38vh; margin-left: auto; margin-right: auto">
-                <div style="margin-top: 30%; margin-left: 15%; margin-bottom: 1%;">
-                    @if (Model.CodiceFiscale != "")
+				</div>
+				<label class="hidden label">Cognome:</label>
+				<input asp-for="@Model.LastName" class="text-form surname">
+				
+
+				<br />
+				<label class="hidden label">Nome:</label>
+				<input asp-for="@Model.FirstName"  class="text-form name">
+				
+				<br />
+				<label class="hidden label">Comuni:</label>
+				<select id="comuni" asp-for="@Model.Istat"  class="text-form istat">
+				</select>
+				<br class="hidden"/>
+				<label class="hidden label">Genere:</label>
+				<select asp-for="@Model.Gender"  class="text-form gender">
+					<option default>M</option>
+					<option>F</option>
+				</select>
+
+				<br class="hidden" />
+				<label class="hidden label">Province:</label>
+                <select id="province" class="text-form province">
+                    <option default disabled value=''>SEL</option>
+                    @foreach (var i in province)
                     {
-                        <strong>@Model.CodiceFiscale</strong>
+                        <option value="@i.Sigla">@i.Sigla</option>
                     }
-                    else
-                    {
-                        <strong>&nbsp;</strong>
-                    }
-                </div>
-                <input asp-for="@Model.LastName" class="text-form" style="margin-left:15%; box-sizing:content-box; width:30%; height:6%; margin-bottom: 2px">
-                <br />
-                <input asp-for="@Model.FirstName" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 30%; height: 6%; margin-bottom: 5px">
-                <br />
-                <select id="comuni" asp-for="@Model.Istat" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 32%; height: 6%; ">
                 </select>
-                <select asp-for="@Model.Gender" class="text-form" style="margin-left: 32%; box-sizing: content-box; width: 10%; height: 6%; margin-bottom:1% ">
-                    <option default>M</option>
-                    <option>F</option>
-                </select>
-                <br />
-                <select id="province" class="text-form" style="margin-left: 15%; box-sizing: content-box; width: 10%; height: 6%; ">
-                </select>
-                <input asp-for="@Model.Birthday" class="text-form" type="date" style="margin-left: 32%; box-sizing: content-box; width: 17%; height: 6%; margin-bottom: 5px">
-            </div>
-            <br />
-            <button class="btn btn-lg btn-success text-center" style="margin-left:auto; margin-right:auto">Calcola</button>
-        </div>
-    </div>
+				<br class="hidden" />
+				<label class="hidden label">Data di Nascita:</label>
+				<input asp-for="@Model.Birthday" class="text-form data" type="date">
+				
+
+			</div>
+			<br />
+			<button class="btn btn-lg btn-success text-center bottone">Calcola</button>
+		</div>
+	</div>
 </form>
 
 
 
 
+
+
+
+
+
+
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
 <script src="~/js/GetComuniProvince.js"></script>
 

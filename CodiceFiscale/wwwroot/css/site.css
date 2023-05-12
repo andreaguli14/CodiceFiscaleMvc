@@ -1,23 +1,161 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
 }
 
+.carta {
+    background-image: url('../img/codfisc.jpg');
+    background-size: cover;
+    width: 60vh;
+    height: 38vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fisc {
+    margin-top: 30%;
+    margin-left: 15%;
+    margin-bottom: 1%;
+}
+
+.surname {
+    margin-bottom: 10px;
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 30%;
+    height: 6%;
+    margin-bottom: 2px;
+}
+
+.name {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 30%;
+    height: 6%;
+    margin-bottom: 5px;
+}
+
+.istat {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 32%;
+    height: 6%;
+}
+
+.gender {
+    margin-left: 32%;
+    box-sizing: content-box;
+    width: 10%;
+    height: 6%;
+    margin-bottom: 1%;
+}
+
+.province {
+    margin-left: 15%;
+    box-sizing: content-box;
+    width: 10%;
+    height: 6%;
+}
+
+.data {
+    margin-left: 60%;
+    margin-bottom: 5%;
+    box-sizing: content-box;
+    width: 17%;
+    height: 6%;
+}
+
+.bottone {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .carta {
+        background-image: none;
+        background-size: cover;
+        width: 380px;
+        height: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+    }
+
+    .label {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .fisc {
+        height: 40px;
+        margin-top: 0px;
+        margin-left: 0px;
+        border: 1px solid black;
+        background-color: #09981e;
+    }
+
+    .surname {
+        height: 25px;
+        margin-left: 10px;
+    }
+
+    .name {
+        height: 25px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .istat {
+        height: 25px;
+        margin-left: 0px;
+    }
+
+    .gender {
+        height: 25px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .province {
+        height: 25px;
+        margin-left: 10px;
+        width: 40px;
+    }
+
+    .data {
+        height: 25px;
+        margin-left: 0px;
+        margin-top: 5px;
+        width: 100px;
+    }
+
+    .bottone {
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .hidden {
+        display: none;
+    }
+}
