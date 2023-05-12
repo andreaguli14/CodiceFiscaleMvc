@@ -52,7 +52,7 @@ public class CFController : Controller
             x.Istat = _comuni.Comunis.FirstOrDefault(y => y.Comune == x.Istat).Code;
             x.CodiceFiscale = _calcolo.CalcolaCodiceFiscale(x);
         }
-        catch (Exception e) { }
+        catch (Exception e) { BadRequest(); }
 
         return Ok(x.CodiceFiscale);
     }
