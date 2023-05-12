@@ -4,7 +4,8 @@
     });
 
 
-    $("#province").change(function () {
+$("#province").change(function () {
+    var id = $(this).val();
         loadComuni(id);
     });
 
@@ -21,7 +22,7 @@ function loadComuni(id) {
         success: function (response) {
             $("#comuni").append("<option default disabled value=''>Comune</option>");
             $.each(response, function (i, data) {
-                $("#comuni").append("<option value='"data.comune +"' >" + data.comune + "</option>");
+                $("#comuni").append("<option value='"+data.comune+"' >" + data.comune + "</option>");
             })
 
 
